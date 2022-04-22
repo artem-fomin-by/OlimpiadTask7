@@ -34,16 +34,12 @@ public class DataSet : IEnumerable<KeyValuePair<Letter, int>>{
         return Letters[s];
     }
 
-    private IEnumerable<KeyValuePair<Letter, int>> Enumerate(){
-        return Letters;
-    }
-
     public IEnumerator<KeyValuePair<Letter, int>> GetEnumerator(){
-        return Enumerate().GetEnumerator();
+        return Letters.GetEnumerator();
     }
 
     IEnumerator IEnumerable.GetEnumerator(){
-        return Enumerate().GetEnumerator();
+        return Letters.GetEnumerator();
     }
 
     public IEnumerable<KeyValuePair<Letter, double>> GetDoubleFractions(){
